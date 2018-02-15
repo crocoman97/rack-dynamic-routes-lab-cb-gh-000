@@ -8,7 +8,7 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/")
       item = @@items.find{ |i| i.name == item_name }
-      resp.write "#{}" 
+      resp.write "mack" 
     else 
       resp.write "Route not found"
       resp.status = 404 
