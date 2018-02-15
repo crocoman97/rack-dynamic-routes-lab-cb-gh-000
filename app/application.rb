@@ -7,10 +7,8 @@ class Application
     req = Rack::Request.new 
     
     if req.path.match(/items/)
-      name = req.path.split("/items/")
-      item = @@items.find{ |i|
-        i.name = name 
-      }
+      item_name = req.path.split("/items/")
+      item = @@items.find{ |i| i.name == item_name }
       resp.write "it will cost you #{item.price}$" 
     else 
       resp.write "page not found"
