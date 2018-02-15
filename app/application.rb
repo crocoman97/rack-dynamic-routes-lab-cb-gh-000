@@ -7,8 +7,9 @@ class Application
     req = Rack::Request.new 
     
     if req.path.match(/items/)
+      name = req.split("/item/")
       item = @@items.find{ |i|
-        i.
+        i.name = name 
       }
     else 
       resp.write "page not found"
