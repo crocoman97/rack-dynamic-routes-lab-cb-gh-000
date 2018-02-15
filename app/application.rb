@@ -1,6 +1,6 @@
 class Application 
   
-
+  @@items = [Item.new("Fig",3),Item.new("Pear",1)]
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
