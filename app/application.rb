@@ -7,7 +7,7 @@ class Application
     req = Rack::Request.new 
     
     if req.path.match(/items/)
-      name = req.split("/item/")
+      name = req.split("/items/")
       item = @@items.find{ |i|
         i.name = name 
       }
