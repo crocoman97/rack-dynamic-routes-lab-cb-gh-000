@@ -7,7 +7,9 @@ class Application
     req = Rack::Request.new 
     
     if req.path.match(/items/)
-      item = ite
+      item = @@items.find{ |i|
+        i.
+      }
     else 
       resp.write "page not found"
       resp.status 404
