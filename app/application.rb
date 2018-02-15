@@ -14,7 +14,7 @@ class Application
       resp.write "it will cost you #{item.price}$" 
     else 
       resp.write "page not found"
-      resp.status 404
+      resp.status = 404 
     end
     
     resp.finish
