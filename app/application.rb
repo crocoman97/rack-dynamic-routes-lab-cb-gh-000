@@ -11,6 +11,7 @@ class Application
       item = @@items.find{ |i|
         i.name = name 
       }
+      resp.write "item.price" 
     else 
       resp.write "page not found"
       resp.status 404
